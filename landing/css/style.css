@@ -517,7 +517,22 @@ h3 {
     display: inline-block;
 }
 
+.advantageSectionTextTitleCenter span {
+    position: relative;
+    display: inline-block;
+}
+
 .advantageSectionTextTitle span::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #888;
+    top: 30px;
+    left: 0px;
+}
+
+.advantageSectionTextTitleCenter span::after {
     content: '';
     position: absolute;
     height: 2px;
@@ -531,27 +546,67 @@ h3 {
     font-size: 15px;
 }
 
+@media screen and (max-width: 1180px) {
+    .advantageSectionTextTitle span {
+        padding-bottom: 20px;
+    }
+
+    .advantageSectionTextTitle span::after {
+        top: 55px;
+    }
+
+    .advantageSectionTextTitleCenter span {
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .advantages {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+        height: 100%;
+        width: 768px;
+    }
+
+    .advantageSection {
+        padding: 33px 0 25px 0;
+    }
+}
+
+.faq_item_wrap_row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.faq_item_wrap_col {
+    width: 40%;
+}
+
 section .faq_item { 
-    margin-top: 50px; 
-    } 
+    margin: 50px auto; 
+} 
     
-    .faq_item { 
-    width: 45%; 
+.faq_item { 
+    width: 112%; 
     border-radius: 12px; 
     border: 6px solid transparent; 
     margin-bottom: 20px; 
-    } 
+} 
     
-    .faq_item.active { 
+.faq_item.active { 
     border: 6px solid #DCDCDC; 
     background-color: #fff; 
-    } 
+} 
     
-    .faq_item.active .faq_answ { 
+.faq_item.active .faq_answ { 
     display: block; 
-    } 
+} 
     
-    .faq_link { 
+.faq_link { 
     width: 100%; 
     display: block; 
     height: 60px; 
@@ -564,13 +619,13 @@ section .faq_item {
     background-image: url(../img/pattern_button.png); 
     color: #fff; 
     padding-left: 16px; 
-    } 
+} 
     
-    .faq_item.active .faq_link span { 
+.faq_item.active .faq_link span { 
     background-image: url(../img/Rectangle13.png); 
-    } 
+} 
     
-    .faq_answ { 
+.faq_answ { 
     width: 100%; 
     background-color: #fff; 
     font-size: 16px; 
@@ -580,16 +635,27 @@ section .faq_item {
     border-bottom-right-radius: 6px; 
     display: none; 
     padding: 20px; 
-    } 
+} 
     
-    .faq_link span { 
+.faq_link span { 
     display: inline-block; 
     width: 100%; 
     background-image: url(../img/Group28.png); 
     background-repeat: no-repeat; 
     background-position: 96% 50%; 
     font-size: 19px; 
+}
+
+@media screen and (max-width: 768px) {
+    .faq_item_wrap_row {
+        width: 768px;
     }
+
+    .faq_link span { 
+        font-size: 14px; 
+    }
+    
+}
 
 .rowBlock2_Text {
     text-align: center;

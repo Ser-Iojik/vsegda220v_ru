@@ -39,15 +39,16 @@ $(".hide a").click(function(e){
     e.preventDefault();
     
 });
-
-$('.faq_item a').click(function(){ 
-    $(this).parent().children('.faq_answ').toggle('.active'); 
-    return false; 
-    }); 
     
-    $( ".faq_item a" ).on( "click" , function() { 
-    $( ".faq_item" ).toggleClass( "active" ); 
-    });
+$(".faq_link").click(function(e){
+        
+    e.preventDefault();
+    
+    $(this).siblings(".faq_answ").slideToggle();
+    
+   $(this).closest(".faq_item").toggleClass("active"); 
+    
+});
 
 $(document).ready(function(){
     $('.productItem').hover(
